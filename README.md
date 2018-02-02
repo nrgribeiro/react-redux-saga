@@ -6,7 +6,7 @@
 ## Development
 
 ```bash
-npm i && npm build
+npm i && npm run build
 ```
 
 ## Meta
