@@ -4,7 +4,7 @@
   "description": "> Webpack 4 tutorial: All You Need to Know, from 0 Conf to Production Mode",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack --mode development",
+    "start": "webpack-dev-server --mode development --open",
     "build": "webpack --mode production"
   },
   "repository": {
@@ -28,6 +28,7 @@
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "webpack": "^4.0.0",
-    "webpack-cli": "^2.0.8"
+    "webpack-cli": "^2.0.8",
+    "webpack-dev-server": "^3.1.0"
   }
 }
