@@ -19,9 +19,10 @@
   },
   "homepage": "https://github.com/valentinogagliardi/webpack-4-quickstart#readme",
   "devDependencies": {
-    "babel-core": "^6.26.0",
+    "babel-core": "^6.26.3",
     "babel-loader": "^7.1.4",
-    "babel-preset-env": "^1.6.1",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
     "css-loader": "^0.28.11",
     "html-loader": "^0.5.5",
@@ -29,9 +30,10 @@
     "mini-css-extract-plugin": "^0.2.0",
     "react": "^16.3.0",
     "react-dom": "^16.3.0",
-    "webpack": "^4.2.0",
+    "redux": "^4.0.0",
+    "webpack": "^4.18.1",
     "webpack-cli": "^2.0.12",
-    "webpack-dev-server": "^3.1.1"
+    "webpack-dev-server": "^3.1.8"
   },
   "dependencies": {}
 }
