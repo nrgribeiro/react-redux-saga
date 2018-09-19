@@ -1,3 +1,9 @@
+/*
+    STATEFUL Component
+    O "state" deste componente é gerido localmente e não pelo Redux
+    Nem todos os componentes necessitam de utilizar o redux para gerir o seu "state"
+ */
+
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import uuidv1 from "uuid";
@@ -13,7 +19,7 @@ class ConnectedForm extends Component {
     constructor() {
         super();
         this.state = {
-            title: ""
+            title: "",
         };
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
