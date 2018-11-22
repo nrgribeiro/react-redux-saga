@@ -1,5 +1,5 @@
 # react - redux - saga introduction
-> Webpack 4 tutorial: All You Need to Know, from 0 Conf to Production Mode
+> Introdução ao desenvolvimento em React com recurso a Redux e Redux Saga
 
 [![Donate](https://img.shields.io/badge/donate-patreon-orange.svg)](https://www.patreon.com/valentinogagliardi)
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat)](LICENSE)
