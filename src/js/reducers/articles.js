@@ -12,17 +12,36 @@ const initialState = {
     articles: []
 };
 
+// Criação do Reducer que vai gerir as operações relativas aos articles
+// um Reducer recebe sempre 2 parâmetros:
+// 1) o state atual
+// 2) a action
 const articlesReducer = (state = initialState, action) => {
+
+    // consoante a action irá executar uma operação diferente
     switch (action.type) {
+
         case ADD_ARTICLE:
-            console.log('add', action.payload);
+            console.log('add: ', action.payload);
+            // adiciona o novo artigo ao state
+            // Utiliza o Object Spread para criar um novo objeto composto pela fusão do state atual (...state)
+            // e do novo state (articles: [...state.articles, action.payload])
+            // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax#Spread_in_object_literals
             return { ...state, articles: [...state.articles, action.payload] };
+
         case DELETE_ARTICLE:
-            return { ...state, articles: [...state.articles.filter((x) => x != action.payload)] };
+            console.log('delete: ', action.payload);
+            // apaga um artigo do state
+            // utiliza a função filter para obter todos os articles excepto o que for enviado pela action
+            return { ...state, articles: [...state.articles.filter((x) => x !== action.payload)] };
         case ARTICLES_FETCH_SUCCEEDED:
-            console.log('success', action.payload);
+            console.log('success: ', action.payload);
+            // adiciona os artigos obtidos através da API
+            // funcionamento idêntico ao ADD_ARTICLE, mas com a diferença de se aplicar o Spread ao payload
+            // pois o que é retornado da API é uma lista de artigos e não apenas um
             return { ...state, articles: [...state.articles, ...action.payload] };
         default:
+            // devolver sempre o state atual, para o caso de nenhuma das ações acima corresponderem
             return state;
     }
 };;

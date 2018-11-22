@@ -1,6 +1,1 @@
-class Api {
-
-    fetchArticles() {
-        return 'http://localhost:8080/data.json';
-    }
-}
+export const ENDPOINT = 'http://localhost:8080/data.json';
