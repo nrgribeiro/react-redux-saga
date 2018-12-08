@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { deleteArticle, fetchArticles } from "../actions/articles";
+import { Link } from 'react-router-dom'
 
 const mapDispatchToProps = dispatch => {
     // define as actions a executar quando existirem alterações locais que requerem atualização de state
@@ -12,6 +13,7 @@ const mapDispatchToProps = dispatch => {
 
 const mapStateToProps = state => {
     // define as props do componente consoante o state do redux
+    console.log('state articles: ', state.articles);
     return { articles: state.articles };
 };
 
@@ -31,21 +33,28 @@ class ConnectedList extends Component{
 
   componentDidMount()
   {
-      // chamada inicial para ir buscar os artigos
-      this.props.fetchArticles({type: 'FETCH_ARTICLES'});
+      if(this.props.articles.length < 1)
+      {
+        // chamada inicial para ir buscar os artigos
+        this.props.fetchArticles({type: 'FETCH_ARTICLES'});
+      }
   }
 
 
   render()
   {
-    const articles = this.props.articles.articles;
+    const articles = this.props.articles;
 
     return (
         <ul className="list-group list-group-flush">
             {articles.map((el, index) => (
+
                 // para cada item dentro da array articles, criar um título e um botão delete
-                <li className="list-group-item" key={index} onClick={() => this.clickAction(el)}>
-                    {el.title}<button className="btn btn-danger btn-lg">delete</button>
+                <li className="list-group-item" key={index}>
+
+                    <Link to={ `/detail/${el.id}` }>{el.title}</Link>
+
+                    <button onClick={() => this.clickAction(el)} className="btn btn-danger btn-lg">delete</button>
                 </li>
             ))}
         </ul>

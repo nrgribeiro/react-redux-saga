@@ -3,9 +3,12 @@ import createSagaMiddleware from 'redux-saga';
 
 // importar os reducers da aplicação
 import articles from "../reducers/articles";
+import auth from "../reducers/auth";
+import user from "../reducers/user";
 
 // importar os sagas da aplicação
-import mySaga from '../sagas/articles';
+import rootSaga from "../sagas/saga";
+
 
 // inicializar o saga Middleware
 const sagaMiddleware = createSagaMiddleware();
@@ -14,13 +17,13 @@ const sagaMiddleware = createSagaMiddleware();
 const store = createStore(
     // caso exista mais do que 1 reducer, usar esta função para "combiná-los"
   combineReducers({
-    articles,
+        articles, auth, user
   }),
     // associar o saga à store do Redux
     applyMiddleware(sagaMiddleware)
 );
 
 // executar o middleware sagas
-sagaMiddleware.run(mySaga);
+sagaMiddleware.run(rootSaga);
 
 export default store;

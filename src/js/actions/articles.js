@@ -1,4 +1,4 @@
-import { ADD_ARTICLE, DELETE_ARTICLE, FETCH_ARTICLES } from "../constants/action-types";
+import {ADD_ARTICLE, DELETE_ARTICLE, FETCH_ARTICLES} from "../constants/action-types";
 
 // definir as actions de adicionar e apagar articles
 // cada action tem de ter um "type" único que a identifica
