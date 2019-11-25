@@ -20,28 +20,28 @@
   "homepage": "https://github.com/valentinogagliardi/webpack-4-quickstart#readme",
   "devDependencies": {
     "babel-core": "^6.26.3",
-    "babel-loader": "^7.1.4",
+    "babel-loader": "^7.1.5",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-plugin-transform-runtime": "^6.23.0",
     "babel-polyfill": "^6.26.0",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
-    "css-loader": "^0.28.11",
+    "css-loader": "^3.2.0",
     "html-loader": "^0.5.5",
-    "html-webpack-plugin": "^3.0.7",
+    "html-webpack-plugin": "^3.2.0",
     "mini-css-extract-plugin": "^0.2.0",
-    "react": "^16.3.0",
-    "react-dom": "^16.3.0",
-    "react-redux": "^5.0.7",
-    "redux": "^4.0.0",
-    "uuid": "^3.3.2",
-    "webpack": "^4.18.1",
-    "webpack-cli": "^3.1.2",
-    "webpack-dev-server": "^3.1.8"
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-redux": "^5.1.2",
+    "redux": "^4.0.4",
+    "uuid": "^3.3.3",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.9.0"
   },
   "dependencies": {
     "babel-preset-es2015": "^6.24.1",
     "react-router-dom": "^4.3.1",
-    "redux-saga": "^0.16.0"
+    "redux-saga": "^0.16.2"
   }
 }

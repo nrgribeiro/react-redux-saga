@@ -14,15 +14,15 @@ const Root = ({ store }) => (
         <Router>
             <div>
                 <nav>
-                    <ul>
-                        <li>
-                            <Link to="/">Home</Link>
+                    <ul className="nav">
+                        <li className="nav-item">
+                            <Link className="nav-link" to="/">Home</Link>
                         </li>
-                        <li>
-                            <Link to="/detail/">Detail</Link>
+                        <li className="nav-item">
+                            <Link className="nav-link" to="/detail/">Detail</Link>
                         </li>
-                        <li>
-                            <Link to="/users/">Users</Link>
+                        <li className="nav-item">
+                            <Link className="nav-link" to="/users/">Users</Link>
                         </li>
 
                         <User />

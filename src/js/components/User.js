@@ -33,8 +33,8 @@ class ConnectedUser extends Component{
       {
           return (
 
-              <li>
-                  <a href={ AUTH_ENDPOINT }>Login</a>
+              <li className="nav-item">
+                  <a className="nav-link" href={ AUTH_ENDPOINT }>Login</a>
               </li>
 
           );
