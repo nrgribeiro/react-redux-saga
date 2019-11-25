@@ -44,7 +44,7 @@ class ConnectedList extends Component{
   render()
   {
     const articles = this.props.articles;
-
+    console.log('render articles ', articles);
     return (
         <ul className="list-group list-group-flush">
             {articles.map((el, index) => (

@@ -30,7 +30,7 @@ const articlesReducer = (state = initialState, action) => {
             console.log('delete: ', action.payload);
             // apaga um artigo do state
             // utiliza a função filter para obter todos os articles excepto o que for enviado pela action
-            return { ...state, ...state.filter((x) => x !== action.payload) };
+            return [ ...state.filter((x) => x !== action.payload) ];
         case ARTICLES_FETCH_SUCCEEDED:
             console.log('success: ', action.payload);
             // adiciona os artigos obtidos através da API
